@@ -4,5 +4,5 @@ This stock ticker lets you see your realtime stats and the prices of auction hou
 
 ## what im doing / have done
 
-[x] created ui concept
-[in progress] research api and what it can provide
+- [x] created ui concept
+- [in progress] research api and what it can provide
