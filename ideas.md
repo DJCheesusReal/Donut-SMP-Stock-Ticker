@@ -21,3 +21,4 @@
 - google gemini thinks it will need 6 amps which means we need like a 50w power source per board, not good if others want to recreate
 - i dont trust ai so maybe it wont
 - why dont we just power the board seperately
+
