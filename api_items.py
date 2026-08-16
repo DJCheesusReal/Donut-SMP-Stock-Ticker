@@ -64,9 +64,12 @@ match data_length:
             'Price': prices
         })
         df['Price'] = df['Price'].ffill()
+        df['Price'] = df['Price'] / 1000000
+        df['Time'] = pd.to_datetime(df['Time'])
         plt.plot(df['Time'], df['Price'], color='blue')
         plt.title("Last 24 hours")
         plt.xlabel("Time")
-        plt.ylabel("Price")
+        plt.ylabel("Price (M)")
+        plt.xticks(rotation=45)
         plt.grid(True)
         plt.show()
