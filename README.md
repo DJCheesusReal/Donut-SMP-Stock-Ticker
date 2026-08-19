@@ -1,8 +1,121 @@
-# Donut SMP Stock Ticker: A desk accesory to show the realtime stats from Donut SMP📈
+# Donut SMP Stock Ticker
 
-This stock ticker lets you see your realtime stats and the prices of auction house items on donutsmp
+> a little ESP32 desk display thing for showing Donut SMP info
 
-## what im doing / have done
+**this is just a fan project and is not affiliated with or endorsed by Donut SMP.**
 
-- [x] created ui concept
-- [in progress] research api and what it can provide
+## what is this
+
+basically i got annoyed having to keep checking the auction house when i was trying to flip items. i also like esp32s, desk accessories, and littyc tech so i thought it would be sick to make a thing that just sits on my desk and shows all the stuff i care about.
+
+it is called a stock ticker because it's inspired by the nasdaq ones and can show item prices/graphs, but it is not *just* that. the idea is that it has a bunch of little pages and it cycles through them like a carousel.
+
+right now the focus is only Donut SMP. maybe in the future it could work with other servers too but i am not even close to worrying about that yet.
+
+## pages i wanna make
+
+| page | what it would show |
+| --- | --- |
+| **item stock ticker** | current price, price change, and a little 24-hour graph for one item |
+| **balance leaderboard** | baltop, probably the top 3 players |
+| **player stats** | a player’s balance, kills, shards, deaths, playtime |
+| **other leaderboards** | shard leaderboards and whatever other stats would be cool |
+
+instead of one massive watchlist page, the plan is just to have loads of separate item pages. you pick the ones you care about and put them in the carousel.
+
+later on i wanna have a local setup website hosted by the ESP32 so you can set all this up over Wi-Fi, then the device just saves it and runs by itself. if that turns out to be too much for the ESP32 then there might be some USB-to-PC setup thing instead, idk yet.
+
+## what actually works rn
+
+this is still early asf. i have not even got the physical hardware yet, i am waiting for Stardance funding so i can buy it. so the cool screen stuff is still a design/plan and not something i am saying is finished.
+
+| thing | status |
+| --- | --- |
+| made the page designs | ✅ done |
+| ESP32 connects to Wi-Fi | ✅ works |
+| ESP32 gets one item price from the auction API | ✅ works |
+| JSON parsing + printing the price to Serial | ✅ works |
+| Python item search thing | ✅ works |
+| Python price-history graph | ✅ works |
+| K/M/B number formatting | 🛠️ kinda works, needs fixing |
+| got an ESP32, panel, and adapter | ⏳ nope not yet |
+| actually rendering the UI on the LED panel | ⏳ not yet |
+| carousel system | 💭 planned |
+| Wi-Fi setup portal | 💭 planned |
+
+## hardware plan
+
+the current plan is a **128×64 HUB75 LED matrix**, an **ESP32-S3 DevKitC-1**, and an ESP32 HUB75 adapter. the panel will have its own power because it is gonna need it.
+
+my current parts research is in [Bill Of Materials.md](./Bill%20Of%20Materials.md). it is not a proper shopping list/build guide yet, it is just what i am looking at. when i actually have the parts and know it works i will make a real one with wiring and everything.
+
+also want to make a 3D-printed desk stand and maybe a wall-mount version later.
+
+## whats in this repo
+
+| file/folder | what it is |
+| --- | --- |
+| `Donut SMP Stock Ticker ESP32 Project/` | the PlatformIO C++ test firmware. it connects to Wi-Fi, asks for one item price, then prints it to Serial. |
+| `api_items.py` | my Python thing for searching items, checking prices, and making price graphs. |
+| `donut_items.csv` | a list of Minecraft items, IDs, and stack sizes that i put together from Minecraft Wiki data. |
+| `ideas.md` | random thoughts about pages, APIs, hardware and stuff. |
+| `Bill Of Materials.md` | current parts research. |
+
+im using **PlatformIO** and **ArduinoJson** for the ESP32 test code. the ESP32 project expects a `secrets.h` file with Wi-Fi stuff in it, which is ignored by Git. obviously do not commit your Wi-Fi password.
+
+> there are no full build instructions yet. i will put them here once i have the real hardware and it actually works instead of making people buy stuff based on a project that is still half in my head.
+
+## todo
+
+- [x] make the page designs
+
+- [x] look at the auction, leaderboard, and stats APIs
+
+- [x] make Python tests for item searching, prices, and graphs
+
+- [x] make the ESP32 get and parse a single auction price
+
+- [ ] get the ESP32, HUB75 adapter, panel, and power supply
+
+- [ ] get text/graphics on the actual LED matrix
+
+- [ ] fix the K/M/B number thing because Donut SMP numbers get dumbly massive
+
+- [ ] turn the item-price test into actual ticker pages with graphs
+
+- [ ] add baltop, player stats, shards, and more leaderboards
+
+- [ ] make the page carousel
+
+- [ ] make a Wi-Fi setup/config portal and save settings on the device
+
+- [ ] make a 3D-printed desk stand and wall mount
+
+- [ ] write a proper parts list, wiring diagram, and build guide
+
+## devlog
+
+im putting my progress and random experiments on my [Stardance devlog](https://stardance.hackclub.com/projects/46566) if you wanna see what im doing with it.
+
+## feedback
+
+im not really looking for contributors rn but if you play Donut SMP and have a page idea, find a bug, or think something would be sick, open a [GitHub Issue](https://github.com/DJCheesusReal/Donut-SMP-Stock-Ticker/issues). no promises but i do wanna know what people would actually want to see on it.
+
+## licence
+
+i want people to be able to build this for themselves, mess with it, and make their own version. **do not sell this project, kits, prebuilt versions, or copies of it without asking first.**
+
+there is not a proper licence file in the repo yet, so this is not final legal licence wording. i am sorting that out before i put full build files/instructions here.
+
+## credits
+
+- made by [@DJCheesusReal](https://github.com/DJCheesusReal)
+
+- currently using the Donut Auction API for price tests
+
+- item names and IDs in `donut_items.csv` came from Minecraft Wiki data
+
+---
+
+if you are a Donut SMP player and you would put this on your desk then yea that is exactly why im making it
+
