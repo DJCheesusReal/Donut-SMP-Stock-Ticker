@@ -21,3 +21,9 @@
 ## Display
 * **[HUB75 LED Matrix (128x64)](https://www.aliexpress.com/item/32824445518.html)** — **£25.92** + free shipping (~$35.13)
   * High resolution display and the leds are hella high density
+
+---
+
+## 3D-printed bits
+* **[Bambu Lab PLA Matte – Charcoal (11101), Refill, 1 kg](https://uk.store.bambulab.com/products/pla-matte)** — **£17.99** (reusable spool already have)
+  * black filament for making the stand, the display frame/holder thing, and a wall-mount type thing
