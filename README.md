@@ -2,6 +2,14 @@
 
 > a little ESP32 desk display thing for showing Donut SMP info
 
+<p align="center">
+  <img src="https://img.shields.io/badge/status-early%20dev-orange?style=flat-square" alt="Project status: early development" />
+  <img src="https://img.shields.io/badge/hardware-ESP32--S3-00979D?style=flat-square&logo=espressif&logoColor=white" alt="ESP32-S3" />
+  <img src="https://img.shields.io/badge/PlatformIO-used-F5822A?style=flat-square&logo=platformio&logoColor=white" alt="Built with PlatformIO" />
+  <img src="https://img.shields.io/badge/Donut%20SMP-unofficial-8B5CF6?style=flat-square" alt="Unofficial Donut SMP project" />
+  <img src="https://img.shields.io/badge/licence-PolyForm%20Noncommercial-blueviolet?style=flat-square" alt="PolyForm Noncommercial License 1.0.0" />
+</p>
+
 **this is just a fan project and is not affiliated with or endorsed by Donut SMP.**
 
 ## what is this
@@ -103,9 +111,11 @@ im not really looking for contributors rn but if you play Donut SMP and have a p
 
 ## licence
 
-i want people to be able to build this for themselves, mess with it, and make their own version. **do not sell this project, kits, prebuilt versions, or copies of it without asking first.**
+the code in this repo is licensed under the [PolyForm Noncommercial License 1.0.0](./LICENSE).
 
-there is not a proper licence file in the repo yet, so this is not final legal licence wording. i am sorting that out before i put full build files/instructions here.
+you can use, build, modify, and share this project for personal, non-commercial use. **do not sell kits, prebuilts, copies, or commercial versions without asking first.**
+
+if you want to sell one or work out a commercial licence, open an issue first.
 
 ## credits
 
@@ -118,4 +128,3 @@ there is not a proper licence file in the repo yet, so this is not final legal l
 ---
 
 if you are a Donut SMP player and you would put this on your desk then yea that is exactly why im making it
-
