@@ -33,6 +33,40 @@ instead of one massive watchlist page, the plan is just to have loads of separat
 
 later on i wanna have a local setup website hosted by the ESP32 so you can set all this up over Wi-Fi, then the device just saves it and runs by itself. if that turns out to be too much for the ESP32 then there might be some USB-to-PC setup thing instead, idk yet.
 
+## future / bigger idea
+
+donut smp is still the main thing rn and i wanna actually finish that properly first. but if this turns out tuff, i do not want it to just be a Donut-only thing forever. the bigger idea is basically a desk ticker for whatever live game/internet stuff you care about.
+
+| future pack / thing | what it could show |
+| --- | --- |
+| **MCSR Ranked** | your player head, current rank + ELO, last match change, and a little 30-match ELO graph |
+| **Twitch** | people you follow who are live, |
+| **Spotify now playing** | the current song, artist, little album icon, playback progress bar, and maybe time left |
+| **other Minecraft servers** | their own item prices, player stats, leaderboards, or whatever their API makes possible |
+| **other game / internet stuff** | other live things that would be cool to have on a desk screen |
+
+so the eventual setup website could have a little **page packs** bit where you install stuff like `Donut SMP`, `MCSR Ranked`, `Twitch`, or `Spotify`, choose the pages you want, then add them to your carousel. the layouts, text, graphs, and animations would be drawn by the actual firmware; packs are mainly settings + data for page types the device already knows how to draw. if a pack needs actual new code then it would need a normal firmware update.
+
+### stuff i wanna get to eventually
+
+- [ ] finish the actual Donut SMP ticker and make it work on real hardware first
+
+- [ ] make the page engine/carousel so it can render loads of different kinds of pages
+
+- [ ] make the local Wi-Fi setup website
+
+- [ ] add a proper page-pack system in the setup site
+
+- [ ] make an MCSR Ranked pack with player rank, ELO, and recent-match graph pages
+
+- [ ] make a Twitch pack that shows people you follow who are live
+
+- [ ] make a Spotify now-playing page because that would be tuff on a desk display
+
+- [ ] see what other Minecraft servers / game / live internet APIs would be sick to support
+
+- [ ] make the finished thing good enough that people can just buy a prebuilt one if they do not wanna wire anything
+
 ## what actually works rn
 
 this is still early asf. i have not even got the physical hardware yet, i am waiting for Stardance funding so i can buy it. so the cool screen stuff is still a design/plan and not something i am saying is finished.
