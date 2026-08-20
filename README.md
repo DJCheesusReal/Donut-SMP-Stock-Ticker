@@ -67,6 +67,8 @@ so the eventual setup website could have a little **page packs** bit where you i
 
 - [ ] make the finished thing good enough that people can just buy a prebuilt one if they do not wanna wire anything
 
+- [ ] maybe make a cheaper **Ticker Mini** later like a tiny full-colour 128×64 OLED version with a small ESP32, a smaller 3D-printed case, and the same little carousel/page idea
+
 ## what actually works rn
 
 this is still early asf. i have not even got the physical hardware yet, i am waiting for Stardance funding so i can buy it. so the cool screen stuff is still a design/plan and not something i am saying is finished.
