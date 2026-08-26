@@ -22,3 +22,10 @@
 - i dont trust ai so maybe it wont
 - why dont we just power the board seperately
 
+
+
+## intergration
+
+spotify??
+mcsr
+maybe twitch, whos live + viewers

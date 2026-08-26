@@ -43,7 +43,11 @@ match data_length:
         price = parsed[0]['price']
         value = price['value']
 
-        if value > 1000000: 
+        if value > 1000000000: 
+            value = value / 1000000000
+            value = round(value, 2)
+            print(f"{display_name} cost: ${value}B for {stack} items")
+        elif value > 1000000: 
             value = value / 1000000
             value = round(value, 2)
             print(f"{display_name} cost: ${value}M for {stack} items")
