@@ -19,6 +19,9 @@ basically i got annoyed having to keep checking the auction house when i was try
 it is called a stock ticker because it's inspired by the nasdaq ones and can show item prices/graphs, but it is not *just* that. the idea is that it has a bunch of little pages and it cycles through them like a carousel.
 
 right now the focus is only Donut SMP. maybe in the future it could work with other servers too but i am not even close to worrying about that yet.
+
+## wiring diagram
+![wiring diagram](./assets/wiring_diagram.png)
 ## 3d stand
 ![Spinning 3D Model](./assets/spinning_model.gif)
 
