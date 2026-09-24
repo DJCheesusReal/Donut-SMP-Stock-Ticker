@@ -11,10 +11,10 @@ df = pd.read_csv("donut_items.csv")
 
 matches = df[df["itemName"].str.contains(u_item_name, case=False, na=False)]
 num_matches = len(matches)
-if num_matches ==0:
+if num_matches == 0:
     print("No matches found")
     exit()
-elif num_matches ==1:
+elif num_matches == 1:
     print("Found item!")
     selected_item = matches.iloc[0]
     stack = matches["stackSize"]
